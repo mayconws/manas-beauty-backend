@@ -81,4 +81,19 @@ public class RequestDTOs {
         @Min(value = 1, message = "Quantidade deve ser pelo menos 1")
         private Integer quantidade;
     }
+
+    @Getter @Setter @NoArgsConstructor @AllArgsConstructor
+    public static class PixConfigRequest {
+        @Size(max = 20)
+        private String tipoChave;
+
+        @Size(max = 140)
+        private String chave;
+
+        @Size(max = 25)
+        private String nomeRecebedor;
+
+        @Size(max = 15)
+        private String cidade;
+    }
 }
